@@ -1,0 +1,41 @@
+program = { statement } ;
+
+statement = variable_declaration | assignment | expression | if_statement | loop | function_declaration | function_call | print_statement | switch_statement ;
+
+variable_declaration = "ingredient", identifier, "=", expression, ";" ;
+assignment = identifier, "=", expression, ";" ;
+
+expression = term, { ("+" | "-"), term } ;
+term = factor, { ("*" | "/"), factor } ;
+factor = number | string | identifier | "(", expression, ")" ;
+
+if_statement = "taste", "(", expression, ")", block, [ "else", block ], ";" ;
+loop = "stir", "(", "ingredient", identifier, "=", expression, ";", expression, ";", identifier, "=", expression, ")", block, ";" ;
+
+function_declaration = "recipe", identifier, "(", [ parameter_list ], ")", block, ";" ;
+parameter_list = identifier, { ",", identifier } ;
+
+function_call = identifier, "(", [ argument_list ], ")", ";" ;
+argument_list = expression, { ",", expression } ;
+
+return_statement = "serve", expression, ";" ;
+
+
+print_statement = "dish", "(", string, ")", ";" ;
+
+switch_statement = "tasteChoice", "(", identifier, ")", "{", { switch_case }, "}", ";" ;
+switch_case = "flavor", expression, ":", "dish", string, ";" | "mysteryFlavor", ":", "dish", string, ";" ;
+
+block = "{", { statement }, "}" ;
+
+identifier = letter, { letter | digit | "_" } ;
+number = ["-"], digit, { digit } ;
+string = '"', { character }, '"' ;
+
+digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ;
+letter = "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" 
+       | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z"
+       | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" 
+       | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" ;
+
+character = ? any printable character except '"' ? ;

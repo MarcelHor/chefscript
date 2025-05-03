@@ -1,0 +1,8 @@
+recipe soucet(ingredient a, ingredient b) {
+    serve a + b;
+}
+
+ingredient x = 3;
+ingredient y = 4;
+ingredient vysledek = soucet(x, y);
+dish(vysledek);

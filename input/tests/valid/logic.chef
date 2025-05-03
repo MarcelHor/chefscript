@@ -1,0 +1,14 @@
+ingredient x = 5;
+taste (x > 3) {
+    dish("vetsi");
+} taste more (x same 5) {
+    dish("rovno");
+} else {
+    dish("mensi");
+}
+
+ingredient flour = 500;
+ingredient sugar = 200;
+sweetEnough = flour < 200 either sugar > 100;
+burned = ew sweetEnough;
+recipeReady = flour > 100 mix sugar > 50;

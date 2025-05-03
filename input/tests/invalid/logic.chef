@@ -1,0 +1,3 @@
+taste x > 3 {
+    dish("chyba");
+}

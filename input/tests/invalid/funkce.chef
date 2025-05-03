@@ -1,0 +1,4 @@
+recipe soucet(a, b) {
+    serve a + c;
+}
+dish(soucet(1,2))

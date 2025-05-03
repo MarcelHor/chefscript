@@ -1,0 +1,9 @@
+ingredient x = 10;
+dish(x);
+
+{
+    ingredient x = 5;
+    dish(x);
+}
+
+dish(x);

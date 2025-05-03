@@ -1,0 +1,4 @@
+ingredient x = 10;
+ingredient y = 5;
+ingredient z = x + y * 2;
+dish(z);

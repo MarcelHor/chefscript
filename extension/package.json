@@ -1,0 +1,28 @@
+{
+  "name": "chefscript",
+  "displayName": "ChefScript",
+  "description": "Syntax highlighting for ChefScript language",
+  "version": "0.0.1",
+  "publisher": "Marcelus",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "chefscript",
+        "aliases": ["ChefScript", "chefscript"],
+        "extensions": [".chef"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "chefscript",
+        "scopeName": "source.chefscript",
+        "path": "./syntaxes/chefscript.tmLanguage.json"
+      }
+    ]
+  }
+}

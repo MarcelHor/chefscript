@@ -1,0 +1,10 @@
+recipe vrat_puvod(ingredient a) {
+    {
+        ingredient a = 99;
+        dish(a); 
+    }
+    serve a;
+}
+
+ingredient vysledek = vrat_puvod(42);
+dish(vysledek);

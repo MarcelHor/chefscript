@@ -1,0 +1,22 @@
+recipe calculator(ingredient a, ingredient b, ingredient op) {
+    taste (op same "+") {
+        serve(a + b);
+    }
+    taste more (op same "-") {
+        serve(a - b);
+    }
+    taste more (op same "*") {
+        serve(a * b);
+    }
+    taste more (op same "/") {
+        serve(a / b);
+    }
+    else {
+        serve "Invalid op";
+    }
+}
+
+ingredient x = 20;
+ingredient y = 4;
+ingredient result = calculator(x,y,"-");
+dish(result);

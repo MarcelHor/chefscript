@@ -1,0 +1,32 @@
+{
+    "name": "ChefScript",
+    "fileTypes": [".chef"],
+    "patterns": [
+      {
+        "name": "keyword.control.chefscript",
+        "match": "\\b(ingredient|dish|recipe|serve|taste|stir|stop|wait|mix|either|ew|same|else|more)\\b"
+      },
+      {
+        "name": "constant.language.boolean.chefscript",
+        "match": "\\b(true|false)\\b"
+      },
+      {
+        "name": "string.quoted.double.chefscript",
+        "match": "\"([^\"\\\\]|\\\\.)*\""
+      },
+      {
+        "name": "constant.numeric.chefscript",
+        "match": "\\b\\d+(\\.\\d+)?\\b"
+      },
+      {
+        "name": "keyword.operator.chefscript",
+        "match": "(\\+|\\-|\\*|\\/|\\?|:|mix|either|ew|same)"
+      },
+      {
+        "name": "punctuation.separator.chefscript",
+        "match": "[;\\(\\)\\{\\}]"
+      }
+    ],
+    "scopeName": "source.chefscript"
+  }
+  

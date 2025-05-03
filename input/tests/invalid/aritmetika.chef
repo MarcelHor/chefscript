@@ -1,0 +1,4 @@
+ingredient x = 10;
+ingredient y = "";
+dish(x - y);
+dish(5/0);

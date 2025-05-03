@@ -3,7 +3,8 @@
 ## Instalace a spuštění
 
 ```bash
-git clone git@github.com
+git clone https://github.com/MarcelHor/chefscript.git
+cd chefscript
 ```
 
 Nejjednodušší způsob, jak projekt spustit, je pomocí Makefile. 

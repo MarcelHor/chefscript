@@ -6,8 +6,33 @@ from ChefScriptEvalVisitor import ChefScriptEvalVisitor
 from ChefScriptErrorListener import ChefScriptErrorListener
 import sys
 import os
+import logging
+
+class LoggerWriter:
+    def __init__(self, level):
+        self.level = level
+        self.buffer = ""
+
+    def write(self, message):
+        if message != '\n':
+            self.level(message)
+
+    def flush(self):
+        pass
 
 def main():
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s [%(levelname)s] %(message)s",
+        handlers=[
+            logging.FileHandler("chefscript.log", mode='a', encoding='utf-8'),
+            logging.StreamHandler()
+        ]
+    )
+    logger = logging.getLogger("ChefScriptLogger")
+    sys.stdout = LoggerWriter(logger.info)
+    sys.stderr = LoggerWriter(logger.error)
+    
     if len(sys.argv) < 2:
         print("❌ Chybí název souboru. Použití: python3 main.py <soubor.chef>")
         return

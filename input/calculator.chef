@@ -19,4 +19,4 @@ recipe calculator(ingredient a, ingredient b, ingredient op) {
 ingredient x = 20;
 ingredient y = 4;
 ingredient result = calculator(x,y,"-");
-dish(result);
+dish("result " + result);
